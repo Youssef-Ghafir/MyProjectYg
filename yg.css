@@ -1,0 +1,391 @@
+/* Start GlobalStyle */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Container */
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+/* Container */
+@media (min-width: 576px) { 
+  .container {
+      width: 540px;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .container {
+    width: 720px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  
+   .container {
+      width: 960px;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .container { 
+      width: 1140px;
+  }
+}
+body {
+  min-height: 100vh;
+  background: transparent linear-gradient(207deg, #C30EF3 0%, #6D41E7 59%, #1179DB 100%) 0% 0% no-repeat padding-box;
+   background-size: cover;
+}
+body *:not(i) {
+  font-family: 'Open Sans', sans-serif;
+}
+.ar {
+  direction: rtl;
+}
+.ar *:not(i) {
+  font-family: 'Cairo', sans-serif;
+}
+.header {
+  width: 100%;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  height: 90px;
+  position: relative;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+.header .container a img {
+  width: 90px;
+}
+.box_lang {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.box_lang img {
+  width: 40px;
+}
+.box_lang i {
+  cursor: pointer;
+  color: #fff;
+}
+.ar .info_lang{
+  left: 5px !important;
+  right: inherit;
+  position: absolute;
+}
+.info_lang {
+  position: absolute;
+  top: 90%;
+  background-color: #fff;
+  width: 300px;
+  padding: 1rem;
+  right: 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 5px;
+}
+.info_lang h3 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+.info_lang .current {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 10px;
+}
+.info_lang .current img {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 50%;
+}
+.hero_section {
+  height: calc(100vh - 90px);
+  /* background-color: red; */
+}
+.hero_section .container {
+  display: grid;
+  align-items: center;
+  gap: 60px;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+img {
+  width: 100%;
+}
+.hero_section .container h1 {
+  font-size: 60px;
+  margin-bottom: 2rem;
+  max-width: 550px;
+  line-height: 1.7;
+  color: #fff;
+}
+.hero_section .container .info > p {
+  color: #fff;
+  max-width: 550px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.hero_section .container button,
+.bg_container .login input:last-of-type {
+  margin-top: 2rem;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#01D57A), to(#00CC9B)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #01D57A 0%, #00CC9B 100%) 0% 0% no-repeat padding-box;
+  -webkit-box-shadow: 0px 10px 11px #7272723B;
+  box-shadow: 0px 10px 11px #7272723B;
+  border: 1px solid #4BEFBC;
+  border-radius: 8px;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+}
+@media (max-width:998px) {
+  body {
+    min-height: 150vh;
+  }
+  .hero_section .container h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .hero_section .container p {
+    text-align: center;
+  }
+  .hero_section .container button {
+    margin: auto;
+    margin-top: 2rem;
+    display: block;
+  }
+  .hero_section .container {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width:590px) {
+  .hero_section .container button {
+    font-size: 16px;
+  }
+  body {
+    min-height: 110vh;
+  }
+  .header .container a img {
+    width: 50px;
+  }
+}
+.bg_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 40%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: center;
+}
+.bg_container .add_followers,
+.bg_container .login {
+  width: 450px;
+  max-width: 100%;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.bg_container .add_followers img,
+.bg_container .login img{
+  width: 130px;
+  margin: 2rem auto;
+  display: block;
+}
+.bg_container .add_followers h3,
+.bg_container .login h3 {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+.bg_container .add_followers select {
+  width: 100%;
+  padding: .5rem;
+  outline: none;
+  border: transparent;
+  border-bottom: 2px solid #333;
+}
+.select_container  {
+  margin-bottom: 1rem;
+}
+.select_container .title {
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.select_container .options {
+  background-color: #fff;
+  margin-top: .3rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.select_container .options li {
+  list-style: none;
+  cursor: pointer;
+  padding: .5rem;
+  transition: .3s ease-in-out;
+}
+.select_container .options li:hover {
+  background-color: #eee;
+}
+.select_container .options li.active {
+  background-color: #eee;
+}
+.add_followers input,
+.bg_container .login input{
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: transparent;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  outline: none;
+}
+.bg_container .login input {
+  margin-bottom: 1rem;
+}
+.add_followers button{
+  margin-top: 1rem;
+  margin: auto;
+  display: block;
+}
+.box_login {
+  background-color: #fff;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  flex-direction: column;
+  width: 500px;
+  max-width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.box_login h1 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 1.3rem;
+}
+.box_login input {
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  outline: none;
+}
+.box_login button {
+  padding: .4rem;
+  border: transparent;
+  background-color: #03A9F4;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+@media (max-width:767px) {
+  .box_login {
+    width: 340px;
+  }
+}
+.result h1 {
+  color: #fff;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 16px;
+}
+
+.table thead td {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #000000;
+  color: #fff;
+}
+
+/*responsive*/
+
+@media (max-width: 500px) {
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+  .table tr {
+    margin-bottom: 15px;
+  }
+  .table td {
+    padding-left: 50%;
+    text-align: left;
+    position: relative;
+  }
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+}
+.delete {
+  padding: .4rem 1rem;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #F44336;
+}
+.out {
+  padding: 1rem;
+  font-size: 16px;
+  color: #fff;
+  background-color: #F44336;
+  display: flex;
+  margin: auto;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: transparent;
+}
